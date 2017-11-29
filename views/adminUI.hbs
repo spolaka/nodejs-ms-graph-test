@@ -1,0 +1,45 @@
+<!--  Copyright (c) Microsoft. All rights reserved. Licensed under the MIT license.
+        See LICENSE in the source repository root for complete license information. -->
+
+<div class="ms-Grid-row">
+   <!-- App navigation bar markup. -->
+   <div class="ms-NavBar">
+      <ul class="ms-NavBar-items">
+         <li class="navbar-header">Node MS Graph Test</li>
+         <li id="disconnect_link" class="ms-NavBar-item ms-NavBar-item--right" onclick="window.location.href='disconnect'"><i class="ms-Icon ms-Icon--x"></i> Disconnect</li>
+      </ul>
+   </div>
+   <!-- App main content markup. -->
+   <div>
+   <br>
+   <form action="addActivityType" method="get">
+      <div class="ms-Grid-col ms-u-mdPush1 ms-u-md9 ms-u-lgPush1 ms-u-lg3">
+         <div>
+            <button id="add_activity_type_button" class="ms-Button">
+            <span class="ms-Button-label">Add Activity Type</span>
+            </button>
+         </div>
+      </div>
+   </form>
+
+   <form action="addActivity" method="get">
+      <div class="ms-Grid-col ms-u-mdPush1 ms-u-md9 ms-u-lgPush1 ms-u-lg3">
+         <div>
+            <button id="add_activity_button" class="ms-Button">
+            <span class="ms-Button-label">Add Activity</span>
+            </button>
+         </div>
+      </div>
+   </form>
+   
+   <form action="redeemPoints" method="get">
+      <div class="ms-Grid-col ms-u-mdPush1 ms-u-md9 ms-u-lgPush1 ms-u-lg3">
+         <div>
+            <button id="add_activity_button" class="ms-Button">
+            <span class="ms-Button-label">Redeem Points</span>
+            </button>
+         </div>
+      </div>
+   </form>
+  </div>
+</div>

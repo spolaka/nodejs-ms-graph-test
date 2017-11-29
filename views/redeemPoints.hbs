@@ -1,0 +1,34 @@
+<div class="ms-Grid-row">
+   <!-- App navigation bar markup. -->
+   <div class="ms-NavBar">
+      <ul class="ms-NavBar-items">
+         <li class="navbar-header">Node MS Graph Test</li>
+         <li id="disconnect_link" class="ms-NavBar-item ms-NavBar-item--right" onclick="window.location.href='disconnect'"><i class="ms-Icon ms-Icon--x"></i> Disconnect</li>
+      </ul>
+   </div>
+   <!-- App main content markup. -->
+   <form action="redeemPoints" method="post">
+     <div class="ms-Grid-col ms-u-mdPush1 ms-u-md9 ms-u-lgPush1 ms-u-lg6">
+       <div>
+         <br>User:<br>
+         <div class="ms-TextField">
+            <select name="selected_email">
+              {{#select selected_email}}
+                {{#each all_users}}
+                  <option value={{this}}>{{this}}</option>
+                {{/each}}
+              {{/select}}
+            </select>
+         </div>
+         <br>Points:<br>
+         <div class="ms-TextField">
+            <input type="number" min="1" max="500" required class="ms-TextField-field" name="activity_points" value="{{redeem_points}}">
+         </div>
+         <br>
+         <button id="redeem_points_button" class="ms-Button">
+         <span class="ms-Button-label">Redeem Points</span>
+         </button>
+       </div>
+    </div>
+   </form>
+</div>

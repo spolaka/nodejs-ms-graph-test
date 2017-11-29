@@ -1,0 +1,52 @@
+<div class="ms-Grid-row">
+   <!-- App navigation bar markup. -->
+   <div class="ms-NavBar">
+      <ul class="ms-NavBar-items">
+         <li class="navbar-header">Node MS Graph Test</li>
+         <li id="disconnect_link" class="ms-NavBar-item ms-NavBar-item--right" onclick="window.location.href='disconnect'"><i class="ms-Icon ms-Icon--x"></i> Disconnect</li>
+      </ul>
+   </div>
+   <!-- App main content markup. -->
+   <form action="addActivity" method="post">
+     <div class="ms-Grid-col ms-u-mdPush1 ms-u-md9 ms-u-lgPush1 ms-u-lg6">
+       <div>
+         <br>Activity Type:<br>
+         <div class="ms-TextField" >
+            <select name="selected_activity">
+              {{#select selected_activity}}
+                {{#each all_activities}}
+                  <option value={{this}}>{{this}}</option>
+                {{/each}}
+              {{/select}}
+            </select>
+         </div>
+         <br>Start Date and Time:<br>
+         <div class="ms-TextField">
+            <input type="datetime-local" required name="activity_start_time" value="{{activity_start_time}}">
+         </div>
+         <br>End Date and Time:<br>
+         <div class="ms-TextField">
+            <input type="datetime-local" required name="activity_end_time" value="{{activity_end_time}}">
+         </div>
+         <br>Points:<br>
+         <div class="ms-TextField">
+            <input type="number" min="1" max="100" required class="ms-TextField-field" name="activity_points" value="{{activity_points}}">
+         </div>
+         <br>Participents:<br>
+         <div class="ms-TextField">
+            <select name="selected_email" multiple>
+              {{#select selected_email}}
+                {{#each all_users}}
+                  <option value={{this}}>{{this}}</option>
+                {{/each}}
+              {{/select}}
+            </select>
+         </div>
+         <br>
+         <button id="craete_activity_button" class="ms-Button">
+         <span class="ms-Button-label">Create Activity</span>
+         </button>
+       </div>
+    </div>
+   </form>
+</div>

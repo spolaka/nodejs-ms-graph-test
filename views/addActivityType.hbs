@@ -1,0 +1,28 @@
+<div class="ms-Grid-row">
+   <!-- App navigation bar markup. -->
+   <div class="ms-NavBar">
+      <ul class="ms-NavBar-items">
+         <li class="navbar-header">Node MS Graph Test</li>
+         <li id="disconnect_link" class="ms-NavBar-item ms-NavBar-item--right" onclick="window.location.href='disconnect'"><i class="ms-Icon ms-Icon--x"></i> Disconnect</li>
+      </ul>
+   </div>
+   <!-- App main content markup. -->
+   <form action="addActivityType" method="post">
+      <div class="ms-Grid-col ms-u-mdPush1 ms-u-md9 ms-u-lgPush1 ms-u-lg6">
+         <div>
+           Activity Name:<br>
+           <div class="ms-TextField">
+              <input type="text" class="ms-TextField-field" required name="activity_type" value="{{activity_type}}">
+           </div>
+           <br>Activity Default Points:<br>
+           <div class="ms-TextField">
+              <input type="number" min="1" max="100" required class="ms-TextField-field" name="activity_default_points" value="{{activity_default_points}}">
+           </div>
+           <br>
+           <button id="craete_activity_type_button" class="ms-Button">
+           <span class="ms-Button-label">Create Activity Type</span>
+           </button>
+         </div>
+      </div>
+   </form>
+</div>

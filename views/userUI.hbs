@@ -1,0 +1,41 @@
+<div class="ms-Grid-row">
+   <!-- App navigation bar markup. -->
+   <div class="ms-NavBar">
+      <ul class="ms-NavBar-items">
+         <li class="navbar-header">Node MS Graph Test</li>
+         <li id="disconnect_link" class="ms-NavBar-item ms-NavBar-item--right" onclick="window.location.href='disconnect'"><i class="ms-Icon ms-Icon--x"></i> Disconnect</li>
+      </ul>
+   </div>
+
+   <br>
+
+   <div class="ms-Grid-col ms-u-mdPush1 ms-u-md9 ms-u-lgPush1 ms-u-lg6">
+      <div>
+         <h2 class="ms-font-xxl ms-fontWeight-semibold">Hi, {{display_name}}!</h2>
+         <p class="ms-font-xl">Welcome to Node MS Graph Test. Your Total Points are {{total_points}}</p>
+      </div>
+      <div>
+        <p class="ms-font-xxl ms-fontWeight-semibold">Your Recent Activity: </p>
+      </div>
+
+      <div>
+        <table border="1" cellpadding="3" id="printTable">
+        	<tbody><tr>
+        		<th>Activite Name</th>
+        		<th>Start Time</th>
+        		<th>Finish Time</th>
+            <th>Points</th>
+        	</tr>
+          {{#each user_activities}}
+            <tr>
+              <td>{{this.activity_name}}</td>
+              <td>{{this.activity_start_time}}</td>
+              <td>{{this.activity_end_time}}</td>
+              <td>{{this.activity_points}}</td>
+            </tr>
+          {{/each}}
+        </tbody>
+      </table>
+    </div>
+   </div>
+</div>
